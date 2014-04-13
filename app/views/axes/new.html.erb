@@ -1,0 +1,48 @@
+
+ <%= form_for(@axis) do |f| %>
+ <div class="field">
+    <%= f.label :attackinfintry %><br>
+    <%= f.text_field :attackinfintry %>
+  </div>
+  <div class="field">
+    <%= f.label :attackartillery %><br>
+    <%= f.text_field :attackartillery %>
+  </div>
+  <div class="field">
+    <%= f.label :attacktanks %><br>
+    <%= f.text_area :attacktanks %>
+  </div>
+   <div class="field">
+    <%= f.label :attackfighters %><br>
+    <%= f.text_field :attackfighters %>
+  </div>
+  <div class="field">
+    <%= f.label :attackbombers %><br>
+    <%= f.text_field :attackbombers %>
+  </div>
+  <div class="field">
+    <%= f.label :defendinfintry %><br>
+    <%= f.text_area :defendinfintry %>
+  </div>
+    <div class="field">
+    <%= f.label :defendartillery %><br>
+    <%= f.text_area :defendartillery %>
+  </div>
+   <div class="field">
+    <%= f.label :defendtanks %><br>
+    <%= f.text_field :defendtanks %>
+  </div>
+  <div class="field">
+    <%= f.label :defendfighters %><br>
+    <%= f.text_field :defendfighters %>
+  </div>
+  <div class="field">
+    <%= f.label :defendbombers %><br>
+    <%= f.text_area :defendbombers %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
+
+

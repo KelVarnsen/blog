@@ -1,0 +1,24 @@
+<div class= 'container'>
+  <table style='margin: 0px auto;'>
+      <% @users.each do |user| %>
+        <tr>
+          <td> Email: <%= user.email %></td>
+
+          <td> <%= link_to "User Profile", user %>
+
+          <td>Date Created: <%= user.created_at%></td>
+
+          <td>
+            Posts:
+           <% user.posts.each do |post| %>
+
+              <%= post.title %>
+           <%end%>
+          </td>
+    <%end%>
+  </table>  
+</div>
+
+ 
+
+

@@ -1,0 +1,20 @@
+<div class = "container">
+ 
+
+    
+      <% @posts.each do |post| %>
+
+        <h3> Title:  <%= post.name %></h3> 
+        <%= post.title %>
+        <h3> Content </h3>
+        <%= truncate(post.content, length: 300) %>
+        <div>
+          <%= link_to 'Show', post %>
+        </div>
+        <hr Width= "100%">
+      <% end %> 
+  </table>
+  <br>
+
+</div>
+
