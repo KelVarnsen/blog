@@ -6,19 +6,14 @@ class AxesController < ApplicationController
   end
 
   def create
-    @axis = Axis.new{axis_params}
-     
-    
-    
+    @axis = Axis.new axis_params
   end
 
-
+private 
   def axis_params
-    ret_params= {:attackinfintry => 'attackinfintry', :attackartillery => 'attackartillery', :attacktanks => 'attacktanks', :attackbombers => 'attackbombers', :attackfighters => 'attackfighters', 
-                :defendinfintry => 'defendinfintry', :defendartillery => 'defendartillery', :defendtanks => 'defendtanks', :defendfighters => 'defendfighters', :defendbombers => 'defendbombers'}
-    ret_params 
+    ret_params = params.require(:axis).permit(:attackinfintry, :attackartillery, :attacktanks , :attackbombers , :attackfighters, 
+                :defendinfintry , :defendartillery , :defendtanks , :defendfighters, :defendbombers)
+    ret_params
   end
-
-
 end
 
