@@ -1,4 +1,3 @@
-
 class Axis
   include ActiveModel::Validations
   include ActiveModel::Conversion
@@ -9,7 +8,7 @@ class Axis
 
   attr_accessor :attackinfintry, :attackartillery, :attacktanks, :attackbombers, :attackfighters, :defendinfintry, :defendartillery, :defendtanks, :defendfighters, :defendbombers 
   def initialize(attributes = {})
-    attributes={} if !attributes
+
     attributes.each do |name, value|
       send("#{name}=", value) if !value.empty?
 
@@ -20,8 +19,8 @@ class Axis
     false
   end
 
-  def total(attackinfintry, attackartillery)
-    total = attackinfintry + attackartillery 
+  def total
+    total = self.attackinfintry + self.attackartillery 
    return total
   end
 end
